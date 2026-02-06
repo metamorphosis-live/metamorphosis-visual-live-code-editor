@@ -157,4 +157,4 @@ Log in with default credentials
 
 ## ©️ Credits
 
-- Coded by [Metamorphosis](https://metamorphosis.live/) (Enrico Schulze)
+- Coded by [Metamorphosis](https://metamorphosis.live/) (Enrico Schulze - Web Developer - Webdesigner - SEO - Marketing)
