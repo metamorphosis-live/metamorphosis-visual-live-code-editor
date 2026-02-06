@@ -3,7 +3,7 @@ session_start();
 
 // Konfiguration
 $user_admin = "admin";
-$pass_admin = "admin01ß#!2bAq";
+$pass_admin = "2#b8A41abc?@fgd*d~";
 $root_dir = __DIR__;
 
 // Login-Logik
@@ -1409,7 +1409,7 @@ $files = str_replace('editor.php', '', $files);
             showNotification('Echtzeit-Vorschau aktiviert', 'success');
             
             // Sofortige Aktualisierung
-            updateLivePreview();
+            //updateLivePreview();
         } else {
             liveEditBtn.classList.remove('active');
             liveEditBtn.innerHTML = '<i class="icon fa-solid fa-bolt"></i>';
