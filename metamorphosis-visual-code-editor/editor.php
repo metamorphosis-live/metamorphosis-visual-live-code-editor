@@ -55,11 +55,6 @@ if (isset($_POST['delete_file']) && isset($_POST['filepath'])) {
         }
     }
 }
-
-$redirect = $_GET['redirect'];
-if (isset($_GET['redirect'])) { 
-    header('Location: '.$redirect);
-}
 	
 if (!isset($_SESSION['loggedin'])) {
     die('
@@ -222,6 +217,11 @@ if (!isset($_SESSION['loggedin'])) {
 	<script>window.history.pushState({}, "", window.location.pathname);</script>
     </body>
     </html>');
+}
+
+$redirect = $_GET['redirect'];
+if (isset($_GET['redirect'])) { 
+    header('Location: '.$redirect);
 }
 
 // Textlänge kürzen
@@ -2691,3 +2691,4 @@ const hideInterval = setInterval(hideElementImmediately, 0);
 </script>
 </body>
 </html>
+
