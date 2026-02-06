@@ -3,7 +3,7 @@ session_start();
 
 // Konfiguration
 $user_admin = "admin";
-$pass_admin = "2#b8A41abc?@fgd*d~";
+$pass_admin = "admin01ß#!2bAq";
 $root_dir = __DIR__;
 
 // Login-Logik
@@ -1030,7 +1030,7 @@ $files = str_replace('editor.php', '', $files);
         </div>
     </div>
     
-    <div class="topbar-center">
+    <div class="topbar-center notranslate">
             <span style="font-size: 13px; color: #4fc1ff;">
                 <span style="color: #fff; display: block; align-items: center; justify-content: center;">
                 <i class="fa-regular fa-file-code"></i> <?= htmlspecialchars($current_file ?: 'Keine Datei ausgewählt') ?></span>
@@ -1057,7 +1057,7 @@ $files = str_replace('editor.php', '', $files);
 </div>
 
 <div id="workspace">
-    <div id="sidebar">
+    <div id="sidebar" class="notranslate">
         <strong>
             <span>Dateien</span>
             <button class="collapsed-sidebar-btn" onclick="toggleSidebar()" title="Sidebar ein/ausklappen"><i class="fa-solid fa-arrows-left-right"></i></button>
