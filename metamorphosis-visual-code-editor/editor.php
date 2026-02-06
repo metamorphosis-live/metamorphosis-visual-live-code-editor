@@ -923,7 +923,7 @@ $files = str_replace('editor.php', '', $files);
 			display: flex;
 			justify-content: center;
 			align-items: center;
-}
+		}
         
         .collapsed-sidebar-btn:hover {
             color: #fff;
@@ -943,6 +943,10 @@ $files = str_replace('editor.php', '', $files);
 		
 		.fa-regular, .far {
 			font-size: 20px;
+		}
+		
+		.VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
+			display: none !important;
 		}
         
         @media (max-width: 950px) {
