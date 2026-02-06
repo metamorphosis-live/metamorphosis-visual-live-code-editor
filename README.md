@@ -78,7 +78,6 @@ A professional web-based live code editor with real-time preview, designed for w
 - Ensure PHP is enabled on server
 
 3. **Adjust credentials** (Optional)
-// In editor.php - Default login:
 - $user_admin = "admin";
 - $pass_admin = "admin01ß#!2bAq";
 
@@ -104,7 +103,6 @@ Browser APIs
 - Fetch API: AJAX communication
 
 🔧 Configuration
-- Basic Configuration (editor.php)
 // Login credentials
 - $user_admin = "admin";              // Username
 - $pass_admin = "secret";             // Password (change!)
