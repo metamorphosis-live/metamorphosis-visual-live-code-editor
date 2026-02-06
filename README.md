@@ -154,5 +154,7 @@ Log in with default credentials
 - IP Restrictions: Allow only specific IPs
 - Directory Permissions: Write permissions only where needed
 
-Coded by Metamorphosis (Enrico Schulze)
-![Metamorphosis Website](https://metamorphosis.live/)
+
+## ©️ Credits
+
+- Coded by [Metamorphosis](https://metamorphosis.live/) (Enrico Schulze)
