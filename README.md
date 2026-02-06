@@ -82,7 +82,7 @@ A professional web-based live code editor with real-time preview, designed for w
 $user_admin = "admin";
 $pass_admin = "admin01ß#!2bAq";
 
-4. **Access**
+5. **Access**
 Open https://your-domain.com/path/editor.php
 Log in with default credentials
 
