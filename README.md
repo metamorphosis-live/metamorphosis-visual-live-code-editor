@@ -79,8 +79,8 @@ A professional web-based live code editor with real-time preview, designed for w
 
 3. **Adjust credentials** (Optional)
 // In editor.php - Default login:
-$user_admin = "admin";
-$pass_admin = "admin01ß#!2bAq";
+- $user_admin = "admin";
+- $pass_admin = "admin01ß#!2bAq";
 
 5. **Access**
 Open https://your-domain.com/path/editor.php
