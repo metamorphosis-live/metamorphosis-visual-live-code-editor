@@ -55,7 +55,7 @@ if (isset($_POST['delete_file']) && isset($_POST['filepath'])) {
         }
     }
 }
-	
+
 if (!isset($_SESSION['loggedin'])) {
     die('
     <!DOCTYPE html>
@@ -1062,11 +1062,12 @@ $files = str_replace('editor.php', '', $files);
 </div>
 
 <div id="workspace">
-    <div id="sidebar" class="notranslate">
+    <div id="sidebar">
         <strong>
             <span>Dateien</span>
             <button class="collapsed-sidebar-btn" onclick="toggleSidebar()" title="Sidebar ein/ausklappen"><i class="fa-solid fa-arrows-left-right"></i></button>
         </strong>
+		<div class="notranslate">
         <hr style="border:0; border-top:1px solid #333; margin:10px 0;">
         <?php foreach($files as $f): 
             if($f == "" || $f == "." || $f == ".." || is_dir($f)) continue; 
@@ -1076,6 +1077,7 @@ $files = str_replace('editor.php', '', $files);
                 <i class="fa-regular fa-file-code"></i> <span><?= truncateText($f) ?></span>
             </a>
         <?php endforeach; ?>
+		</div>
     </div>
     
     <div id="main-content">
@@ -2691,4 +2693,3 @@ const hideInterval = setInterval(hideElementImmediately, 0);
 </script>
 </body>
 </html>
-
