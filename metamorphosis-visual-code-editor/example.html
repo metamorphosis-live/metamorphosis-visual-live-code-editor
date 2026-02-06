@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Webdesign,Webentwicklung,Website erstellen,Brandenburg,Brandenburg an der Havel,Berlin,Webdesigner,Webentwickler,Seo,Marketing,Onlinemarketing,Online Marketing">
+    <meta name="description" content="Metamorphosis – Webdesign, Webentwicklung, SEO & Onlinemarketing Dienstleistungen aus Brandenburg an der Havel für Ihren digitalen Erfolg.">
+    <title>Metamorphosis | Webentwicklung / Webdesign & SEO aus Brandenburg</title>
+	<link rel="icon" type="image/png" href="https://metamorphosis.live/images/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+    <style>
+        body {
+            margin: 0px;
+            font-family: 'Open Sans', sans-serif;
+            overflow: hidden;
+            background: #000;
+            user-select: none;
+        }
+        
+        #teaser {
+            background: url(https://metamorphosis.live/images/bg.jpg);
+            background-size: cover;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 270px;
+            height: calc(100vh - 280px);
+            animation: fadeIn 0.5s ease-in-out, fadeInContent 2s ease-in-out forwards, parallaxBackground 90s linear infinite;
+            position: relative;
+            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+
+        #teaser-content {
+            max-width: 1400px;
+            margin-top: -250px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            opacity: 0;
+            animation: fadeInContent 2s ease-in-out forwards;
+        }
+
+        #teaser-img {
+            width: 400px;
+            height: auto;
+            margin-bottom: -60px;
+            filter: drop-shadow(0px 0px 5px #00000091);
+            animation: logoGlow 2.5s ease-in-out 1.5s forwards;
+        }
+
+        #teaser h1 {
+            text-align: center; 
+            font-size: 80px;
+            font-weight: 100;
+            color: #4fc1ff;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            width: 100%;
+            margin-bottom: -30px;
+            animation: textGlow 2.5s ease-in-out 1.5s forwards;
+        }
+
+        #teaser h2 {
+            text-align: center; 
+            font-size: 26px;
+            font-weight: 100;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            width: 100%;
+        }
+        
+        #teaser h3 {
+            text-align: center; 
+            font-size: 18px;
+            font-weight: 100;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            width: 100%;
+        }
+
+        #teaser p {
+            font-size: 24px;
+            text-shadow: 0px 0px 11px rgba(0,0,0,1);
+            color: #fff;
+            text-align: center;
+            font-weight: 100;
+            width: 100%;
+            max-width: 500px;
+            font-style: italic;
+        }
+        
+        #teaser a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #teaser a:hover {
+            color: #4fc1ff;
+            font-weight: 600;
+        }
+        
+        #teaser .img {
+            filter: drop-shadow(0px 0px 10px #00000091);
+        }
+
+        @keyframes parallaxBackground {
+            0% {
+                background-position-y: 0%;
+            }
+            100% {
+                background-position-y: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInContent {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes logoGlow {
+            0% {
+                filter: drop-shadow(0px 0px 5px #00000091);
+            }
+            50% {
+                filter: drop-shadow(0px 0px 5px #4fc1ffad) drop-shadow(0px 0px 35px #4fc1ffad);
+            }
+            100% {
+                filter: drop-shadow(0px 0px 5px #00000091);
+            }
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            }
+            50% {
+                text-shadow: 0px 0px 20px #4fc1ff, 0px 0px 30px #4fc1ff, 0px 0px 40px #4fc1ff;
+            }
+            100% {
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            #teaser {
+                background-position-x: right;
+                height: calc(100vh - 230px);
+               background-size: 120% 150%;
+                animation: fadeIn 0.5s ease-in-out, fadeInContent 2s ease-in-out forwards, parallaxBackground 90s linear infinite;
+            }
+        }
+
+        @media (max-width: 870px) {
+            #teaser {
+                background-position-x: right;
+                padding-top: 210px;
+                height: calc(100vh - 230px);
+                background-size: 220% 130%;
+                animation: fadeIn 0.5s ease-in-out, fadeInContent 2s ease-in-out forwards, parallaxBackground 30s linear infinite;            }
+            
+            #teaser h1 {
+                font-size: 56px;  
+                margin-bottom: -20px;
+            }
+            
+            #teaser h2 {
+                font-size: 18px;
+            }
+
+            #teaser h3 {
+                font-size: 14px;
+            }
+
+            #h2-kontakt {
+                font-size: 18px !important;
+            }
+            
+            #teaser p {
+                font-size: 18px;
+                max-width: 430px;
+            }
+
+            #teaser-img {
+                width: 300px;
+                margin-bottom: -30px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            #teaser {
+                background-position-x: right !important;
+                /* Animation bleibt aktiv auf Mobile */
+            }
+            
+            #teaser h1 {
+                font-size: 43px;   
+                margin-bottom: -15px;
+            }
+            
+            #teaser h2 {
+                font-size: 14px;
+            }
+
+            #teaser h3 {
+                font-size: 14px;
+            }
+            
+            #h2-kontakt {
+                font-size: 20px !important;
+            }
+            
+            #teaser p {
+                font-size: 15px;
+                max-width: 320px;
+            }
+            
+            #teaser-img {
+                width: 250px;
+                margin-bottom: -15px;
+            }
+        }
+
+        @media (max-width:380px) {
+            #teaser {
+                background-position-x: right !important;
+                /* Animation bleibt aktiv auf Mobile */
+            }
+            
+            #teaser h1 {
+                font-size: 37px;   
+                margin-bottom: -15px;
+            }
+            
+            #teaser h2 {
+                font-size: 12px;
+            }
+
+            #teaser h3 {
+                font-size: 10px;
+            }
+            
+            #h2-kontakt {
+                font-size: 14px !important;
+            }
+            
+            #teaser p {
+                font-size: 14px;
+                max-width: 320px;
+            }
+            
+            #teaser-img {
+                width: 250px;
+                margin-bottom: -15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+<div id="teaser">
+<div id="teaser-content">
+ <img id="teaser-img" alt="Metamorphosis - Webdesign aus Brandenburg" src="images/logo.png">
+ <h1>METAMORPHOSIS</h1>  
+ <h2>WEBDESIGN – WEBENTWICKLUNG – SEO – MARKETING</h2>
+ <p>Kreativität kennt keine Grenzen – sie überwindet Barrieren, verbindet Gegensätze und schafft unendliche Möglichkeiten.</p> 
+ 
+ <h2 id="h2-kontakt" style="font-weight: 400; font-size: 26px; margin-bottom: -10px">Referenzen</h2>
+
+ <h3><a href="https://justcarmens.de" title='Referenz "Just Carmens"'>Just Carmens</a> – <a href="https://generalbau-sek.de" title='Referenz "Generalbau S.E.K"'>Generalbau S.E.K</a> – <a href="https://ls-company.de" title='Referenz "LS Company"'>LS Company</a>
+</h3>
+ <h2 id="h2-kontakt" style="font-weight: 400; font-size: 26px; margin-bottom: -10px">Kontakt</h2>
+ <div style="width: auto">
+ <h3><a href="https://wa.me/4917672864689">Whatsapp</a> – <a href="mailto:metamorphosis.brandenburg@gmail.com">E-Mail</a> – <a href="https://metamorphosis.live/datenschutz.html">Impressum</a>
+</h3>
+
+</div>   
+</div>
+</div>
+<div id="seo" style="display: none;">
+     <header>
+        <h1>Metamorphosis – Professionelles Webdesign / Webentwicklung / SEO und Digitale Lösungen aus Brandenburg an der Havel</h1>
+    </header>
+    
+    <main>
+        <section>
+            <p>In der heutigen digital vernetzten Welt ist eine starke Online-Präsenz für Unternehmen jeder Größe unverzichtbar. Im Herzen Brandenburgs bieten wir maßgeschneiderte digitale Lösungen, die Ihr Unternehmen im digitalen Raum zum Strahlen bringen. Unsere Expertise in Webdesign, Suchmaschinenoptimierung (SEO), Webentwicklung und Onlinemarketing macht uns zu Ihrem verlässlichen Partner für alle digitalen Herausforderungen.</p>
+        </section>
+
+        <section>
+            <h2>Webdesign mit lokalem Charakter</h2>
+            <p>Als Webdesign-Agentur aus Brandenburg an der Havel verstehen wir die Besonderheiten der regionalen Wirtschaft. Wir kombinieren modernes Design mit praktischer Funktionalität und schaffen Websites, die nicht nur optisch ansprechend sind, sondern auch Ihre Geschäftsziele unterstützen. Jedes Projekt beginnt mit einer gründlichen Analyse Ihrer Anforderungen und endet mit einer maßgeschneiderten Website, die perfekt zu Ihrem Unternehmen passt.</p>
+            <p>Unsere Webdesign-Lösungen umfassen:</p>
+            <ul>
+                <li>Responsive Designs für optimale Darstellung auf allen Geräten</li>
+                <li>Intuitive Benutzeroberflächen für beste Nutzererfahrung</li>
+                <li>Corporate Design-Integration für einen einheitlichen Markenauftritt</li>
+                <li>Barrierefreie Webauftritte gemäß aktueller Standards</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>SEO aus Brandenburg für mehr Sichtbarkeit</h2>
+            <p>Die beste Website bleibt wirkungslos, wenn sie von potenziellen Kunden nicht gefunden wird. Unsere SEO-Strategien aus Brandenburg an der Havel sorgen dafür, dass Ihre Website in den Suchergebnissen ganz oben erscheint. Wir analysieren relevante Keywords, optimieren Ihre Inhalte und verbessern die technische Struktur Ihrer Website – immer mit dem Ziel, Ihre Sichtbarkeit bei Google und Co. nachhaltig zu steigern.</p>
+            <p>Unser SEO-Leistungsspektrum beinhaltet:</p>
+            <ul>
+                <li>Umfassende Keyword-Recherche und -Analyse</li>
+                <li>On-Page und Off-Page Optimierung</li>
+                <li>Technische SEO für schnelle Ladezeiten und optimale Indexierung</li>
+                <li>Regelmäßige Performance-Auswertungen und Optimierungsmaßnahmen</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Professionelle Webentwicklung mit modernsten Technologien</h2>
+            <p>Als erfahrene Webentwickler aus Brandenburg an der Havel setzen wir auf zukunftssichere Technologien und effiziente Programmierung. Von klassischen Unternehmenswebsites bis hin zu komplexen Webapplikationen und Online-Shops – wir entwickeln digitale Lösungen, die Ihren Anforderungen gerecht werden und Ihr Unternehmen voranbringen.</p>
+            <p>Unsere Webentwicklungs-Kompetenzen umfassen:</p>
+            <ul>
+                <li>Entwicklung mit modernen Frameworks und CMS-Systemen</li>
+                <li>Maßgeschneiderte Programmierung für individuelle Anforderungen</li>
+                <li>Integration von Drittsystemen und APIs</li>
+                <li>Wartung und kontinuierliche Weiterentwicklung bestehender Websites</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Strategisches Onlinemarketing für nachhaltigen Erfolg</h2>
+            <p>Ergänzend zu Webdesign und -entwicklung bieten wir ganzheitliche Onlinemarketing-Strategien, die Ihre digitale Präsenz stärken und messbare Erfolge bringen. Mit unserem Know-how aus Brandenburg an der Havel unterstützen wir Sie dabei, Ihre Zielgruppe effektiv anzusprechen und neue Kunden zu gewinnen.</p>
+            <p>Unser Onlinemarketing-Portfolio beinhaltet:</p>
+            <ul>
+                <li>Content-Marketing mit relevanten und überzeugenden Inhalten</li>
+                <li>Social Media-Strategien für mehr Reichweite und Engagement</li>
+                <li>E-Mail-Marketing-Kampagnen zur Kundenbindung</li>
+                <li>Conversion-Optimierung für bessere Abschlussraten</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Ihr lokaler Partner für digitale Exzellenz</h2>
+            <p>Als in Brandenburg an der Havel verwurzeltes Unternehmen kennen wir die Herausforderungen und Chancen der Region. Wir arbeiten eng mit lokalen Unternehmen zusammen und verstehen die spezifischen Anforderungen des Marktes. Gleichzeitig bringen wir internationales Know-how und aktuelle Trends in unsere Projekte ein.</p>
+            <p>Vertrauen Sie auf einen Partner, der nicht nur technische Expertise, sondern auch ein tiefes Verständnis für Ihre Geschäftsziele mitbringt. Mit maßgeschneiderten Lösungen aus den Bereichen Webdesign, SEO, Webentwicklung und Onlinemarketing helfen wir Ihnen, im digitalen Zeitalter erfolgreich zu sein – von Brandenburg an der Havel aus für die ganze Welt.</p>
+            <p>Kontaktieren Sie uns noch heute für ein unverbindliches Beratungsgespräch und erfahren Sie, wie wir Ihr Unternehmen im digitalen Raum zum Erfolg führen können. Gemeinsam entwickeln wir eine Strategie, die perfekt zu Ihren Zielen und Ihrem Budget passt.</p>
+        </section>
+    </main> 
+  </div>
+</body>
+</html>
