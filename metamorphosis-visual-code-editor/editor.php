@@ -56,6 +56,11 @@ if (isset($_POST['delete_file']) && isset($_POST['filepath'])) {
     }
 }
 
+$redirect = $_GET['redirect'];
+if (isset($_GET['redirect'])) { 
+    header('Location: '.$redirect);
+}
+	
 if (!isset($_SESSION['loggedin'])) {
     die('
     <!DOCTYPE html>
@@ -2686,4 +2691,3 @@ const hideInterval = setInterval(hideElementImmediately, 0);
 </script>
 </body>
 </html>
-
