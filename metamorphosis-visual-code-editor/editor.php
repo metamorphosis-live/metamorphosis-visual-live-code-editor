@@ -1024,7 +1024,7 @@ $files = str_replace('editor.php', '', $files);
 <body>
 
 <div id="topbar">
-    <div class="topbar-left">
+    <div class="topbar-left notranslate">
         <div class="logo-small">
             <div class="logo-icon">
                 <img src="https://metamorphosis.live/images/logo.png" alt="Logo">
