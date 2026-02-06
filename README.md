@@ -2,7 +2,7 @@
 
 A professional web-based live code editor with real-time preview, designed for web developers and content managers. This editor enables direct editing of PHP, HTML, CSS, and JavaScript files with immediate visual feedback.
 
-![Metamorphosis Editor Preview](https://metamorphosis.live/images/code-editor.jpg)
+![Metamorphosis Editor Preview](https://metamorphosis.live/images/code-editor.jpeg)
 
 ## ✨ Key Features
 
