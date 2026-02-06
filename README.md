@@ -103,6 +103,7 @@ Browser APIs
 - Fetch API: AJAX communication
 
 🔧 Configuration
+
 // Login credentials
 - $user_admin = "admin";              // Username
 - $pass_admin = "secret";             // Password (change!)
