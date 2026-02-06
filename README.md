@@ -104,12 +104,12 @@ Browser APIs
 
 🔧 Configuration
 
-// Login credentials
+Login credentials
 - $user_admin = "admin";              // Username
 - $pass_admin = "secret";             // Password (change!)
 - $root_dir = __DIR__;                // Working directory
 
-// Protected files
+Protected files
 - $files = str_replace('.htaccess', '', $files); // Cannot be deleted or opened
 - $files = str_replace('editor.php', '', $files); // Cannot be deleted or opened
 
