@@ -106,13 +106,13 @@ Browser APIs
 🔧 Configuration
 - Basic Configuration (editor.php)
 // Login credentials
-$user_admin = "admin";              // Username
-$pass_admin = "secret";             // Password (change!)
-$root_dir = __DIR__;                // Working directory
+- $user_admin = "admin";              // Username
+- $pass_admin = "secret";             // Password (change!)
+- $root_dir = __DIR__;                // Working directory
 
 // Protected files
-$files = str_replace('.htaccess', '', $files); // Cannot be deleted or opened
-$files = str_replace('editor.php', '', $files); // Cannot be deleted or opened
+- $files = str_replace('.htaccess', '', $files); // Cannot be deleted or opened
+- $files = str_replace('editor.php', '', $files); // Cannot be deleted or opened
 
 Security Settings
 - Password Protection: Authorized users only
