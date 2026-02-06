@@ -3,7 +3,7 @@ session_start();
 
 // Konfiguration
 $user_admin = "admin";
-$pass_admin = "2#b8A41abc?@fgd*d~";
+$pass_admin = "admin01ß#!2bAq";
 $root_dir = __DIR__;
 
 // Login-Logik
@@ -2686,3 +2686,4 @@ const hideInterval = setInterval(hideElementImmediately, 0);
 </script>
 </body>
 </html>
+
