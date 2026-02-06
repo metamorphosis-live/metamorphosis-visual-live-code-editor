@@ -111,6 +111,17 @@
             filter: drop-shadow(0px 0px 10px #00000091);
         }
 
+        #github-img {
+            width: 60px;
+            height: auto;
+            position: relative;
+            margin-top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: invert(1);
+            display none;
+        }
+
         @keyframes parallaxBackground {
             0% {
                 background-position-y: 0%;
@@ -170,6 +181,10 @@
                 height: calc(100vh - 230px);
                background-size: 120% 150%;
                 animation: fadeIn 0.5s ease-in-out, fadeInContent 2s ease-in-out forwards, parallaxBackground 90s linear infinite;
+            }
+            
+            #github-img {
+                display: block;
             }
         }
 
@@ -295,8 +310,9 @@
  <div style="width: auto">
  <h3><a href="https://wa.me/4917672864689">Whatsapp</a> – <a href="mailto:metamorphosis.brandenburg@gmail.com">E-Mail</a> – <a href="https://metamorphosis.live/datenschutz.html">Impressum</a>
 </h3>
-
+<a href="https://github.com/metamorphosis-live" title="Metamorphosis auf GitHub"><img id="github-img" alt="Metamorphosis auf GitHub" src="https://metamorphosis.live/images/github-logo.png"></a>
 </div>   
+</div>
 </div>
 </div>
 </body>
