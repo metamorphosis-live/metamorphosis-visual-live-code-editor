@@ -948,6 +948,10 @@ $files = str_replace('editor.php', '', $files);
 		.VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
 			display: none !important;
 		}
+		
+		.VIpgJd-ZVi9od-aZ2wEe-wOHMyf.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
+			display: none !important;
+		}
         
         @media (max-width: 950px) {
 			 #sidebar {
@@ -2670,4 +2674,3 @@ $files = str_replace('editor.php', '', $files);
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 </html>
-
