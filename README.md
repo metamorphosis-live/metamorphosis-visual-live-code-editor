@@ -85,68 +85,70 @@ A professional web-based live code editor with real-time preview, designed for w
 Open https://your-domain.com/path/editor.php
 Log in with default credentials
 
-### 🧩 Technologies
-Backend
+## 🧩 Technologies
+
+### Backend
 - PHP 7.4+: Server-side logic and file management
 - Session Management: Secure user authentication
 - File System API: File operations (Read, Write, Delete)
 
-Frontend
+### Frontend
 - HTML5/CSS3: Modern, responsive interface
 - JavaScript (ES6+): Dynamic interactions
 - Ace Editor: Professional code editor
 - Font Awesome: Icons for better UX
 
-Browser APIs
+### Browser APIs
 - LocalStorage: Persistent settings
 - Iframe API: Isolated preview
 - Fetch API: AJAX communication
 
-🔧 Configuration
+## 🔧 Configuration
 
-Login credentials
+### Login credentials
 - $user_admin = "admin";              // Username
 - $pass_admin = "secret";             // Password (change!)
 - $root_dir = __DIR__;                // Working directory
 
-Protected files
+### Protected files
 - $files = str_replace('.htaccess', '', $files); // Cannot be deleted or opened
 - $files = str_replace('editor.php', '', $files); // Cannot be deleted or opened
 
-Security Settings
+### Security Settings
 - Password Protection: Authorized users only
 - File Protection: editor.php and .htaccess cannot be deleted
 - Session Timeout: Automatic logout
 - Input Validation: Protection against path traversal
 
-### 📖 Usage
-Basic Operations
+## 📖 Usage
+
+### Basic Operations
 - Login: Enter username and password
 - Select File: Click on filename in sidebar
 - Edit Code: Use Ace Editor for changes
 - Save: Ctrl+S or click Save button
 - View Preview: See results on the right
 
-Advanced Features
+### Advanced Features
 - Element Selection (Click-to-Code)
 - Activate element selection button (mouse pointer icon)
 - Click on element in preview window
 - Editor automatically jumps to corresponding code line
 - Element is highlighted in preview
 
-Live Edit Mode
+### Live Edit Mode
 - Activate live edit button (lightning icon)
 - Modify code in editor
 - Preview updates automatically (500ms delay)
 
-Layout Customization
+### Layout Customization
 - Drag Splitter: Adjust code/preview area sizes
 - Toggle Layout: Switch between horizontal and vertical arrangement
 - Collapse Sidebar: Hide file list when needed
 
-### 🛡️ Security Notes
+## 🛡️ Security Notes
 
-CRITICAL SETTINGS BEFORE PRODUCTION
+### CRITICAL SETTINGS BEFORE PRODUCTION
 - Change Password: Modify $pass_admin variable in code
 - Enforce HTTPS: Via .htaccess or server configuration
 - IP Restrictions: Allow only specific IPs
