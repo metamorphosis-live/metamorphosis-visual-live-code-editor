@@ -3,7 +3,7 @@ session_start();
 
 // Konfiguration
 $user_admin = "admin";
-$pass_admin = "2#b8A41abc?@fgd*d~";
+$pass_admin = "admin01ß#!2bAq";
 $root_dir = __DIR__;
 
 // Login-Logik
@@ -2670,3 +2670,4 @@ $files = str_replace('editor.php', '', $files);
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 </body>
 </html>
+
