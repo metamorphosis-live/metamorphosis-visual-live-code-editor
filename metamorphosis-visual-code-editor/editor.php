@@ -948,10 +948,6 @@ $files = str_replace('editor.php', '', $files);
 		.VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
 			display: none !important;
 		}
-		
-		.VIpgJd-ZVi9od-aZ2wEe-wOHMyf.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
-			display: none !important;
-		}
         
         @media (max-width: 950px) {
 			 #sidebar {
@@ -2672,5 +2668,20 @@ $files = str_replace('editor.php', '', $files);
 </script>
 <script>window.gtranslateSettings = {"default_language":"de","native_language_names":true,"detect_browser_language":true,"languages":["de","fr","it","es","en"]}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<script>
+// Sofortiges Ausblenden beim Start
+const hideElementImmediately = () => {
+  const element = document.querySelector('.VIpgJd-ZVi9od-aZ2wEe-wOHMyf');
+  if (element) {
+    element.style.display = 'none';
+  }
+};
+
+// Erstes sofortiges Ausblenden
+hideElementImmediately();
+
+// Intervall für kontinuierliches Überprüfen und Ausblenden (jede 100ms)
+const hideInterval = setInterval(hideElementImmediately, 0);
+</script>
 </body>
 </html>
