@@ -148,7 +148,7 @@ Log in with default credentials
 
 ## 🛡️ Security Notes
 
-### CRITICAL SETTINGS BEFORE PRODUCTION
+### Critical Settings
 - Change Password: Modify $pass_admin variable in code
 - Enforce HTTPS: Via .htaccess or server configuration
 - IP Restrictions: Allow only specific IPs
