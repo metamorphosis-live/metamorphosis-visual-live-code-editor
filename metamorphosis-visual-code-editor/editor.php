@@ -1386,23 +1386,24 @@ $files = str_replace('editor.php', '', $files);
         }
     });
     
-    // Auto-save editor state on changes
-    let saveTimeout;
-    editor.on('change', function(e) {
-        clearTimeout(saveTimeout);
-        saveTimeout = setTimeout(saveEditorState, 1000);
-        
-        // Live Edit Mode
-        if (isLiveEditMode) {
-            clearTimeout(liveEditTimeout);
-            liveEditTimeout = setTimeout(updateLivePreview, 500);
-        }
-    });
-    
-    editor.on('changeSelection', function() {
-        clearTimeout(saveTimeout);
-        saveTimeout = setTimeout(saveEditorState, 500);
-    });
+	// Auto-save editor state on changes
+	let saveTimeout;
+	let LiveEditModeOnStart = 0;
+	setTimeout(() => {LiveEditModeOnStart = 1}, 2500);
+	
+	const LIVE_EDIT_DELAY_MS = 1000; // 2 Sekunden Verzögerung für Live Preview
+
+	editor.on('change', function(e) {
+		// Auto-save bleibt bei 1 Sekunde
+		clearTimeout(saveTimeout);
+		saveTimeout = setTimeout(saveEditorState, 500);
+		
+		// Live Edit Mode nur aktualisieren, wenn 2 Sekunden ohne Änderung vergangen sind
+		if (isLiveEditMode && LiveEditModeOnStart == 1) {
+			clearTimeout(liveEditTimeout);
+			liveEditTimeout = setTimeout(updateLivePreview, LIVE_EDIT_DELAY_MS);
+		}		
+	});
     
     // ===== LIVE EDIT FUNCTIONALITY =====
     function toggleLiveEdit() {
@@ -1416,7 +1417,7 @@ $files = str_replace('editor.php', '', $files);
             showNotification('Echtzeit-Vorschau aktiviert', 'success');
             
             // Sofortige Aktualisierung
-            updateLivePreview();
+            //updateLivePreview();
 			
         } else {
             liveEditBtn.classList.remove('active');
