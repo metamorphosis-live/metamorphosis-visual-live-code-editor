@@ -3,7 +3,7 @@ session_start();
 
 // Konfiguration
 $user_admin = "admin";
-$pass_admin = "admin01ß#!2bAq";
+$pass_admin = "2#b8A41abc?@fgd*d~";
 $root_dir = __DIR__;
 
 // Login-Logik
@@ -944,6 +944,8 @@ $files = str_replace('editor.php', '', $files);
 		
 		.horizontal .splitter {
 			background: #3a3a3a;
+			opacity: 0.7;
+			padding-left: 8px;
 		}
 		
 		.fa-regular, .far {
@@ -1434,6 +1436,21 @@ $files = str_replace('editor.php', '', $files);
         const content = editor.getValue();
         const filepath = currentFileName;
         
+        // ----- AKTUELLE POSITION SPEICHERN VOR DEM NEULADEN -----
+        let currentScrollX = 0, currentScrollY = 0;
+        try {
+            const iframeDoc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+            if (iframeDoc) {
+                currentScrollX = iframeDoc.documentElement.scrollLeft || iframeDoc.body.scrollLeft || 0;
+                currentScrollY = iframeDoc.documentElement.scrollTop || iframeDoc.body.scrollTop || 0;
+                localStorage.setItem('iframe_scroll_' + currentFileName, JSON.stringify({
+                    x: currentScrollX,
+                    y: currentScrollY
+                }));
+            }
+        } catch (e) {}
+        // --------------------------------------------------------
+        
         // Save to file
         const formData = new FormData();
         formData.append('save_file', '1');
@@ -1446,8 +1463,22 @@ $files = str_replace('editor.php', '', $files);
                 // Update iframe with cache busting
                 previewFrame.src = filepath + '?t=' + new Date().getTime();
                 
-                // WICHTIG: Element-Auswahl nach Neuladen wieder aktivieren
+                // WICHTIG: Position nach dem Laden wiederherstellen
                 setTimeout(() => {
+                    try {
+                        const savedPos = localStorage.getItem('iframe_scroll_' + currentFileName);
+                        if (savedPos) {
+                            const pos = JSON.parse(savedPos);
+                            const iframeDoc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+                            if (iframeDoc) {
+                                iframeDoc.documentElement.scrollLeft = pos.x;
+                                iframeDoc.documentElement.scrollTop = pos.y;
+                                iframeDoc.body.scrollLeft = pos.x;
+                                iframeDoc.body.scrollTop = pos.y;
+                            }
+                        }
+                    } catch (e) {}
+                    
                     if (isIframeClickMode) {
                         disableIframeClickMode();
                         setTimeout(() => enableIframeClickMode(), 100);
@@ -1458,7 +1489,7 @@ $files = str_replace('editor.php', '', $files);
                 console.error('Live Edit Error:', error);
             });
     }
-    
+	
     // ===== IFRAME CLICK TO CODE - KORRIGIERTE VERSION =====
     const iframeClickBtn = document.getElementById('iframeClickBtn');
     let iframeEventListeners = [];
@@ -2525,6 +2556,21 @@ $files = str_replace('editor.php', '', $files);
             return; 
         }
 
+        // ----- AKTUELLE POSITION SPEICHERN VOR DEM NEULADEN -----
+        let currentScrollX = 0, currentScrollY = 0;
+        try {
+            const iframeDoc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+            if (iframeDoc) {
+                currentScrollX = iframeDoc.documentElement.scrollLeft || iframeDoc.body.scrollLeft || 0;
+                currentScrollY = iframeDoc.documentElement.scrollTop || iframeDoc.body.scrollTop || 0;
+                localStorage.setItem('iframe_scroll_' + currentFileName, JSON.stringify({
+                    x: currentScrollX,
+                    y: currentScrollY
+                }));
+            }
+        } catch (e) {}
+        // --------------------------------------------------------
+
         const formData = new FormData();
         formData.append('save_file', '1');
         formData.append('filepath', filepath);
@@ -2537,7 +2583,22 @@ $files = str_replace('editor.php', '', $files);
                 previewFrame.src = filepath + '?t=' + new Date().getTime();
                 saveEditorState();
                 
+                // ----- POSITION NACH DEM LADEN WIEDERHERSTELLEN -----
                 setTimeout(() => {
+                    try {
+                        const savedPos = localStorage.getItem('iframe_scroll_' + currentFileName);
+                        if (savedPos) {
+                            const pos = JSON.parse(savedPos);
+                            const iframeDoc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+                            if (iframeDoc) {
+                                iframeDoc.documentElement.scrollLeft = pos.x;
+                                iframeDoc.documentElement.scrollTop = pos.y;
+                                iframeDoc.body.scrollLeft = pos.x;
+                                iframeDoc.body.scrollTop = pos.y;
+                            }
+                        }
+                    } catch (e) {}
+                    
                     if (isIframeClickMode) {
                         disableIframeClickMode();
                         setTimeout(() => enableIframeClickMode(), 300);
@@ -2548,7 +2609,7 @@ $files = str_replace('editor.php', '', $files);
                 showNotification("Fehler beim Speichern!", "error");
             });
     }
-
+	
     function showNotification(message, type) {
         document.querySelectorAll('.notification').forEach(n => n.remove());
         
